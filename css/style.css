@@ -22,12 +22,12 @@ body {
   justify-content: space-between;
   height: 100px;
   padding: 0 2rem;
-  background-color: #0f0f10;
+  background-color: #071832;
 }
 
 /* LOGO */
 .logo img {
-  height: 120px;
+  height: 140px;
   margin-top: 50px;
   width: auto;
   object-fit: contain;
@@ -48,7 +48,7 @@ body {
 
 .nav ul li a {
   font-size: 18px;
-  color: white;
+  color: #BFB582;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -59,7 +59,7 @@ body {
 
 .nav ul {
   display: flex;
-  background-color: #0f0f10;
+  background-color: #071832;
   color: white;
   gap: 1rem;
   list-style: none;
@@ -188,8 +188,8 @@ nav li::after {
   display: flex;
   justify-content: center;
   padding: 5rem 1rem;
-  background-color: #0f0f10;
-  color: white;
+  background-color: #071832;
+  color: #BFB582;
   opacity: 0.8;
 }
 

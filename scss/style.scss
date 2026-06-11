@@ -30,7 +30,7 @@ body {
 
 /* LOGO */
 .logo img {
-  height: 120px;
+  height: 140px;
   margin-top: 50px;
   width: auto;
   object-fit: contain;
@@ -51,7 +51,7 @@ body {
 
 .nav ul li a {
   font-size: 18px;
-  color: white;
+  color: v.$text-color;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -206,7 +206,7 @@ nav li::after {
   justify-content: center;
   padding: 5rem 1rem;
   background-color: v.$nav-color;
-  color: white;
+  color: v.$text-color;
   opacity: 0.8;
 }
 
