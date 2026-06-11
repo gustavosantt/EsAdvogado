@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Elson Eduado & Associados</title>
+</head>
+
+<body>
+
+    <body>
+
+        <div class="navegacao">
+            <nav class="nav">
+
+                <div class="logo load-animation">
+                    <img src="img/logo.png" alt="Logo Escritório">
+                </div>
+
+                <ul class="load-animation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Escritório</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div class="Home">
+
+            <div class="home-content">
+
+                <span class="home-tag load-animation">
+                    ADVOCACIA E CONSULTORIA JURÍDICA
+                </span>
+
+                <h1 class="load-animation">
+                    Defesa Jurídica com Experiência, Estratégia e Compromisso
+                </h1>
+
+                <p class="load-animation">
+                    Atuação especializada na proteção dos seus direitos,
+                    oferecendo soluções jurídicas seguras, atendimento personalizado
+                    e acompanhamento completo do seu caso.
+                </p>
+            </div>
+
+        </div>
+
+  <!--Sobre-->
+        <section class="sobre">
+
+            <div class="sobre-content">
+
+                <div class="sobre-texto reveal">
+
+                    <h2>Sobre Nós</h2>
+
+                    <p>
+                        Escritório especializado em Direito XXX, com ampla experiência
+                        na condução de processos e consultorias jurídicas.
+                        Atuamos com dedicação, estratégia e excelência,
+                        alcançando resultados positivos para nossos clientes.
+                    </p>
+
+                </div>
+
+                <div class="sobre-cards reveal">
+
+                    <div class="card">
+                        <img src="img/resolvidos.png" alt="">
+                        <h3>+120</h3>
+                        <p>Casos resolvidos</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/tempoexperiencia.png" alt="">
+                        <h3>+10 anos</h3>
+                        <p>de experiência</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/satisfacao.png" alt="">
+                        <h3>98%</h3>
+                        <p>de satisfação</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+       <!--Serviços-->
+       <section class="especialidades">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+    
+                <div class="flip-card-front">
+                    <h3>⚖️ Direito Trabalhista</h3>
+                </div>
+    
+                <div class="flip-card-back">
+                    <h3>Atuação</h3>
+    
+                    <ul>
+                        <li>Rescisão Contratual</li>
+                        <li>Horas Extras</li>
+                        <li>Assédio Moral</li>
+                        <li>Reclamações Trabalhistas</li>
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="flip-card">
+            <div class="flip-card-inner">
+    
+                <div class="flip-card-front">
+                    <h3>🏛️ Direito Civil</h3>
+                </div>
+    
+                <div class="flip-card-back">
+                    <h3>Atuação</h3>
+    
+                    <ul>
+                        <li>Leilao</li>
+                        <li>Compra e Venda de imoveis</li>
+                        <li>Locação</li>
+                        <li>Planejamento Previdenciário</li>
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+    
+    </section>
+       
+
+        <!-- Reveal Scroll -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                const observer = new IntersectionObserver((entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+
+                    });
+
+                }, {
+                    threshold: 0.2
+                });
+
+                document.querySelectorAll('.reveal').forEach(el => {
+                    observer.observe(el);
+                });
+
+            });
+        </script>
+
+    </body>
+
+</html>
