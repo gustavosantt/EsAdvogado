@@ -74,18 +74,40 @@ body {
   opacity: 0.9;
 }
 
-nav li a {
-  align-items: center;
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-  justify-content: right;
-  text-align: center;
-  margin: 10px;
+/* LINKS DO MENU */
+.nav ul li {
+  position: relative;
 }
 
-nav li::after {
-  background-color: blue;
+.nav ul li a {
+  display: block;
+  font-size: 20px;
+  color: #D4AF37;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Efeito da linha abaixo */
+.nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* Hover */
+.nav ul li:hover::after {
+  width: 80%;
+}
+
+.nav ul li:hover a {
+  color: white;
 }
 
 /*Estilo Home*/
@@ -618,6 +640,32 @@ nav li::after {
   margin: 0;
   color: #bdbdbd;
   font-size: 0.95rem;
+}
+
+/* ==========================
+   Animação site
+========================== */
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease;
+}
+
+.hidden-up {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 /* ==========================

@@ -20,11 +20,11 @@
                 </div>
 
                 <ul class="load-animation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Escritório</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">O Escritório</a></li>
+                    <li><a href="#">Áreas de Atuação</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Nossa História</a></li>
                 </ul>
 
             </nav>
@@ -52,11 +52,11 @@
         </div>
 
   <!--Sobre-->
-        <section class="sobre">
+        <section class="sobre hidden-up">
 
             <div class="sobre-content">
 
-                <div class="sobre-texto reveal">
+                <div class="sobre-texto">
 
                     <h2>Sobre Nós</h2>
 
@@ -69,7 +69,7 @@
 
                 </div>
 
-                <div class="sobre-cards reveal">
+                <div class="sobre-cards">
 
                     <div class="card">
                         <img src="img/resolvidos.png" alt="">
@@ -96,11 +96,11 @@
         </section>
 
        <!--Serviços-->
-       <section class="especialidades">
+       <section class="especialidades hidden-up">
 
         <h1>Areas de atuação</h1>
 
-        <div class="flip-card">
+        <div class="flip-card hidden-up">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <h3>⚖️ Direito Trabalhista</h3>
@@ -144,7 +144,7 @@
     </section>
 
     <!--Falar com especialista-->
-    <section class="faleconosco">
+    <section class="faleconosco hidden-left">
     
         <div class="faleconosco-overlay">
             <h2>ELSON EDUARDO</h2>
@@ -167,11 +167,11 @@
 
     <div class="advogado-container">
 
-        <div class="advogado-foto">
+        <div class="advogado-foto hidden-left">
             <img src="img/elson-eduardo.png" alt="Dr. Elson Eduardo">
         </div>
 
-        <div class="advogado-info">
+        <div class="advogado-info hidden-right">
 
             <span class="advogado-tag">
                 ADVOGADO ESPECIALISTA
@@ -218,7 +218,7 @@
 
     <!--Footer-->
 
-    <footer class="footer">
+    <footer class="footer hidden-up">
 
         <div class="footer-container">
     
@@ -275,7 +275,33 @@
     
     </footer>
 
-        <!-- Reveal Scroll -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        
+            const observer = new IntersectionObserver((entries) => {
+        
+                entries.forEach(entry => {
+        
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("show");
+                    }
+        
+                });
+        
+            }, {
+                threshold: 0.15
+            });
+        
+            document.querySelectorAll(
+                ".hidden-left, .hidden-right, .hidden-up"
+            ).forEach(el => {
+                observer.observe(el);
+            });
+        
+        });
+        </script>
+
+        <!-- Reveal Scroll 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
 
@@ -298,7 +324,7 @@
                 });
 
             });
-        </script>
+        </script>-->
 
     </body>
 

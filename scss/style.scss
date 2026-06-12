@@ -76,20 +76,45 @@ body {
   opacity: 0.9;
 }
 
-nav li a {
-  align-items: center;
+/* LINKS DO MENU */
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li a {
+  display: block;
   font-size: 20px;
-  color: white;
+  color: v.$text-color;
   text-decoration: none;
-  justify-content: right;
-  text-align: center;
-  margin: 10px;
+  padding: 10px;
+  transition: color 0.3s ease;
 }
 
-nav li::after {
-  background-color: v.$hover-color;
+/* Efeito da linha abaixo */
+.nav ul li::after {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  bottom: -5px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: white;
+
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
 }
 
+/* Hover */
+.nav ul li:hover::after {
+  width: 80%;
+}
+
+.nav ul li:hover a {
+  color: white;
+}
 /*Estilo Home*/
 .Home {
   background-image: url('../img/header.png');
@@ -727,6 +752,32 @@ nav li::after {
 }
 
 
+
+/* ==========================
+   Animação site
+========================== */
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease;
+}
+
+.hidden-up {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0,0);
+}
 
 /* ==========================
    RESPONSIVO
