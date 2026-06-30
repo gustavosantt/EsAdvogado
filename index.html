@@ -10,93 +10,96 @@
 
 <body>
 
-    <body>
+    <div class="navegacao">
+        <nav class="nav">
 
-        <div class="navegacao">
-            <nav class="nav">
+            <div class="logo load-animation">
+                <img src="img/logo.png" alt="Logo Escritório">
+            </div>
 
-                <div class="logo load-animation">
-                    <img src="img/logo.png" alt="Logo Escritório">
-                </div>
 
-                <ul class="load-animation">
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">O Escritório</a></li>
-                    <li><a href="#">Áreas de Atuação</a></li>
-                    <li><a href="#">Fale Conosco</a></li>
-                    <li><a href="#">Nossa História</a></li>
-                </ul>
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                ☰
+            </button>
 
-            </nav>
+            <ul class="menu load-animation">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">O Escritório</a></li>
+                <li><a href="#areaatuacao">Áreas de Atuação</a></li>
+                <li><a href="#faleconosco">Fale Conosco</a></li>
+                <li><a href="#advogado">Nossa História</a></li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <div class="Home" id="home">
+
+        <div class="home-content ">
+
+            <span class="home-tag load-animation">
+                ADVOCACIA E CONSULTORIA JURÍDICA
+            </span>
+
+            <h1 class="load-animation">
+                Defesa Jurídica com Experiência, Estratégia e Compromisso
+            </h1>
+
+            <p class="load-animation">
+                Atuação especializada na proteção dos seus direitos,
+                oferecendo soluções jurídicas seguras, atendimento personalizado
+                e acompanhamento completo do seu caso.
+            </p>
         </div>
 
-        <div class="Home">
+    </div>
 
-            <div class="home-content">
+    <!--Sobre-->
+    <section class="sobre hidden-up" id="sobre">
 
-                <span class="home-tag load-animation">
-                    ADVOCACIA E CONSULTORIA JURÍDICA
-                </span>
+        <div class="sobre-content">
 
-                <h1 class="load-animation">
-                    Defesa Jurídica com Experiência, Estratégia e Compromisso
-                </h1>
+            <div class="sobre-texto">
 
-                <p class="load-animation">
-                    Atuação especializada na proteção dos seus direitos,
-                    oferecendo soluções jurídicas seguras, atendimento personalizado
-                    e acompanhamento completo do seu caso.
+                <h2>Sobre Nós</h2>
+
+                <p>
+                    Escritório especializado em Direito XXX, com ampla experiência
+                    na condução de processos e consultorias jurídicas.
+                    Atuamos com dedicação, estratégia e excelência,
+                    alcançando resultados positivos para nossos clientes.
                 </p>
+
+            </div>
+
+            <div class="sobre-cards">
+
+                <div class="card">
+                    <img src="img/resolvidos.png" alt="">
+                    <h3>+120</h3>
+                    <p>Casos resolvidos</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/tempoexperiencia.png" alt="">
+                    <h3>+10 anos</h3>
+                    <p>de experiência</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/satisfacao.png" alt="">
+                    <h3>98%</h3>
+                    <p>de satisfação</p>
+                </div>
+
             </div>
 
         </div>
 
-  <!--Sobre-->
-        <section class="sobre hidden-up">
+    </section>
 
-            <div class="sobre-content">
-
-                <div class="sobre-texto">
-
-                    <h2>Sobre Nós</h2>
-
-                    <p>
-                        Escritório especializado em Direito XXX, com ampla experiência
-                        na condução de processos e consultorias jurídicas.
-                        Atuamos com dedicação, estratégia e excelência,
-                        alcançando resultados positivos para nossos clientes.
-                    </p>
-
-                </div>
-
-                <div class="sobre-cards">
-
-                    <div class="card">
-                        <img src="img/resolvidos.png" alt="">
-                        <h3>+120</h3>
-                        <p>Casos resolvidos</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="img/tempoexperiencia.png" alt="">
-                        <h3>+10 anos</h3>
-                        <p>de experiência</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="img/satisfacao.png" alt="">
-                        <h3>98%</h3>
-                        <p>de satisfação</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-       <!--Serviços-->
-       <section class="especialidades hidden-up">
+    <!--Serviços-->
+    <section class="especialidades hidden-up" id="areaatuacao">
 
         <h1>Areas de atuação</h1>
 
@@ -105,10 +108,10 @@
                 <div class="flip-card-front">
                     <h3>⚖️ Direito Trabalhista</h3>
                 </div>
-    
+
                 <div class="flip-card-back">
                     <h3>Atuação</h3>
-    
+
                     <ul>
                         <li>Rescisão Contratual</li>
                         <li>Horas Extras</li>
@@ -116,20 +119,20 @@
                         <li>Reclamações Trabalhistas</li>
                     </ul>
                 </div>
-    
+
             </div>
         </div>
-    
+
         <div class="flip-card">
             <div class="flip-card-inner">
-    
+
                 <div class="flip-card-front">
                     <h3>🏛️ Direito Civil</h3>
                 </div>
-    
+
                 <div class="flip-card-back">
                     <h3>Atuação</h3>
-    
+
                     <ul>
                         <li>Leilao</li>
                         <li>Compra e Venda de imoveis</li>
@@ -137,171 +140,218 @@
                         <li>Planejamento Previdenciário</li>
                     </ul>
                 </div>
-    
+
             </div>
         </div>
-    
+
     </section>
 
     <!--Falar com especialista-->
-    <section class="faleconosco hidden-left">
-    
+    <section class="faleconosco hidden-left" id="faleconosco">
+
         <div class="faleconosco-overlay">
-            <h2>ELSON EDUARDO</h2>
+            <h2>DR.ELSON EDUARDO</h2>
             <h3>ADVOCACIA E ASSESSORIA JURÍDICA</h3>
-    
+
             <p>
                 Atendimento personalizado e estratégico para defender seus direitos.
             </p>
-    
+
             <button class="contact">
                 Falar com um Especialista
             </button>
         </div>
-    
+
     </section>
 
-<!--Apresentação Advogado Elson-->
+    <!--Apresentação Advogado Elson-->
 
-<section class="advogado">
+    <section class="advogado" id="advogado">
 
-    <div class="advogado-container">
+        <div class="advogado-container">
 
-        <div class="advogado-foto hidden-left">
-            <img src="img/elson-eduardo.png" alt="Dr. Elson Eduardo">
-        </div>
+            <div class="advogado-foto hidden-left">
+                <img src="img/elson-eduardo.png" alt="Dr. Elson Eduardo">
+            </div>
 
-        <div class="advogado-info hidden-right">
+            <div class="advogado-info hidden-right">
 
-            <span class="advogado-tag">
-                ADVOGADO ESPECIALISTA
-            </span>
+                <span class="advogado-tag">
+                    ADVOGADO ESPECIALISTA
+                </span>
 
-            <h2>Dr. Elson Eduardo</h2>
+                <h2>Dr. Elson Eduardo</h2>
 
-            <p>
-                Com sólida experiência na advocacia, atua na defesa dos
-                interesses de seus clientes com ética, comprometimento e
-                estratégia jurídica personalizada.
-            </p>
+                <p>
+                    Com sólida experiência na advocacia, atua na defesa dos
+                    interesses de seus clientes com ética, comprometimento e
+                    estratégia jurídica personalizada.
+                </p>
 
-            <p>
-                Sua trajetória profissional é marcada pela busca constante
-                por atualização e excelência técnica, proporcionando
-                segurança e confiança em cada atendimento realizado.
-            </p>
+                <p>
+                    Sua trajetória profissional é marcada pela busca constante
+                    por atualização e excelência técnica, proporcionando
+                    segurança e confiança em cada atendimento realizado.
+                </p>
 
-            <div class="advogado-destaques">
+                <div class="advogado-destaques">
 
-                <div class="destaque">
-                    <h3>10+</h3>
-                    <span>Anos de Experiência</span>
-                </div>
+                    <div class="destaque">
+                        <h3>10+</h3>
+                        <span>Anos de Experiência</span>
+                    </div>
 
-                <div class="destaque">
-                    <h3>120+</h3>
-                    <span>Casos Atendidos</span>
-                </div>
+                    <div class="destaque">
+                        <h3>120+</h3>
+                        <span>Casos Atendidos</span>
+                    </div>
 
-                <div class="destaque">
-                    <h3>98%</h3>
-                    <span>Satisfação</span>
+                    <div class="destaque">
+                        <h3>98%</h3>
+                        <span>Satisfação</span>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
     <!--Footer-->
 
     <footer class="footer hidden-up">
 
         <div class="footer-container">
-    
+
             <div class="footer-logo">
                 <img src="img/logo.png" alt="Elson Eduardo Advocacia">
-    
+
                 <p>
                     Advocacia especializada em soluções jurídicas com ética,
                     transparência e comprometimento com cada cliente.
                 </p>
             </div>
-    
+
             <div class="footer-links">
                 <h3>Navegação</h3>
-    
+
                 <a href="#home">Home</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#especialidades">Áreas de Atuação</a>
                 <a href="#contato">Contato</a>
             </div>
-    
+
             <div class="footer-links">
                 <h3>Especialidades</h3>
-    
+
                 <a href="#">Direito Trabalhista</a>
                 <a href="#">Direito Civil</a>
                 <a href="#">Direito Previdenciário</a>
                 <a href="#">Consultoria Jurídica</a>
             </div>
-    
+
             <div class="footer-contato">
                 <h3>Contato</h3>
-    
+
                 <p>📞 (XX) XXXXX-XXXX</p>
                 <p>📧 contato@elsonadvocacia.com.br</p>
                 <p>📍 Minas Gerais - Brasil</p>
-    
+
                 <div class="footer-social">
                     <a href="#">📷</a>
                     <a href="#">💼</a>
                     <a href="#">💬</a>
                 </div>
             </div>
-    
+
         </div>
-    
+
         <div class="footer-bottom">
             <p>
                 © 2026 Elson Eduardo Advocacia • Todos os direitos reservados. <br>
-                    Desenvolvido por Gustavo Henrique
-        
+                Desenvolvido por Gustavo Henrique
+
             </p>
         </div>
-    
+
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
         
+            // Animações
             const observer = new IntersectionObserver((entries) => {
-        
                 entries.forEach(entry => {
-        
-                    if(entry.isIntersecting){
+                    if (entry.isIntersecting) {
                         entry.target.classList.add("show");
                     }
-        
                 });
-        
             }, {
                 threshold: 0.15
             });
         
             document.querySelectorAll(
                 ".hidden-left, .hidden-right, .hidden-up"
-            ).forEach(el => {
-                observer.observe(el);
+            ).forEach(el => observer.observe(el));
+        
+            // MENU HAMBÚRGUER
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+        
+            menuToggle.addEventListener("click", () => {
+                menu.classList.toggle("active");
+            });
+        
+            // ROLAGEM SUAVE
+            function scrollSuave(destino, duracao = 1800) {
+        
+                const inicio = window.pageYOffset;
+                const fim = destino.getBoundingClientRect().top + inicio - 100;
+                const distancia = fim - inicio;
+        
+                let inicioTempo = null;
+        
+                function animar(tempoAtual) {
+        
+                    if (!inicioTempo) inicioTempo = tempoAtual;
+        
+                    const tempo = tempoAtual - inicioTempo;
+                    const progresso = Math.min(tempo / duracao, 1);
+        
+                    window.scrollTo(0, inicio + distancia * progresso);
+        
+                    if (progresso < 1) {
+                        requestAnimationFrame(animar);
+                    }
+                }
+        
+                requestAnimationFrame(animar);
+            }
+        
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+        
+                link.addEventListener("click", function(e) {
+        
+                    e.preventDefault();
+        
+                    const destino = document.querySelector(this.getAttribute("href"));
+        
+                    if (destino) {
+                        scrollSuave(destino, 1800);
+                    }
+        
+                    // Fecha o menu no celular após clicar
+                    menu.classList.remove("active");
+                });
+        
             });
         
         });
         </script>
 
-        <!-- Reveal Scroll 
+    <!-- Reveal Scroll 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
 
@@ -326,6 +376,6 @@
             });
         </script>-->
 
-    </body>
+</body>
 
 </html>
