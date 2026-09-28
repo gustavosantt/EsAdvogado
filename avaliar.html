@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avalie o atendimento</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1a1d21;--mut:#6b7280;--bd:#d9dde2;--ac:#b8892f}
+@media(prefers-color-scheme:dark){:root{--bg:#111316;--card:#1a1d21;--tx:#eceef1;--mut:#9aa3ae;--bd:#2c3138}}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,sans-serif}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:28px 22px;width:min(92vw,420px);text-align:center}
+h1{font-size:1.3rem;margin:0 0 6px}
+p{color:var(--mut);margin:0 0 18px}
+#stars{display:flex;justify-content:center;gap:6px;margin-bottom:20px}
+#stars button{font-size:2.4rem;line-height:1;background:none;border:0;color:var(--bd);cursor:pointer;padding:2px}
+#stars button.on{color:var(--ac)}
+#enviar{font:inherit;font-weight:600;padding:11px 22px;border:0;border-radius:8px;background:var(--ac);color:#fff;cursor:pointer}
+#enviar:disabled{opacity:.45;cursor:not-allowed}
+#msg{margin:16px 0 0;min-height:1.5em}
+</style>
+</head>
+<body>
+<main class="card">
+  <h1>Como foi o seu atendimento?</h1>
+  <p>Toque em uma nota de 1 a 5.</p>
+  <div id="stars" role="radiogroup" aria-label="Nota de 1 a 5"></div>
+  <input id="site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+  <button id="enviar" disabled>Enviar avaliação</button>
+  <p id="msg" role="status"></p>
+</main>
+
+<script>
+const stars = document.getElementById("stars"), btn = document.getElementById("enviar"), msg = document.getElementById("msg");
+const k = new URLSearchParams(location.search).get("k") || "";
+let nota = 0;
+
+for (let n = 1; n <= 5; n++) {
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = "★"; b.setAttribute("aria-label", n + " de 5");
+  b.onclick = () => { nota = n; btn.disabled = false; [...stars.children].forEach((s, i) => s.classList.toggle("on", i < n)); };
+  stars.append(b);
+}
+
+function agradecer() {
+  stars.style.display = btn.style.display = "none";
+  msg.textContent = "Obrigado pela sua avaliação!";
+}
+try { if (localStorage.getItem("avaliou")) agradecer(); } catch (e) {}
+
+btn.onclick = async () => {
+  btn.disabled = true; msg.textContent = "Enviando...";
+  try {
+    const r = await fetch("/api/avaliar", {
+      method: "POST",
+      headers: {"content-type": "application/json"},
+      body: JSON.stringify({nota, k, site: document.getElementById("site").value})
+    });
+    if (!r.ok) throw new Error();
+    try { localStorage.setItem("avaliou", "1"); } catch (e) {}
+    agradecer();
+  } catch (e) {
+    msg.textContent = "Não foi possível enviar. Tente novamente.";
+    btn.disabled = false;
+  }
+};
+</script>
+</body>
+</html>

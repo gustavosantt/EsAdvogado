@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -46,7 +46,7 @@
             </h1>
 
             <p class="load-animation">
-                Élson Eduardo SIA/MG 181.208,
+                Élson Eduardo OAB/MG 181.208,
                 mais de 15 anos de atuação Direito como uno, processo como instrumento, segurança jurídica como fim.
 
             </p>
@@ -96,7 +96,7 @@
 
                 <div class="card">
                     <img src="img/satisfacao.png" alt="">
-                    <h3 data-satisfacao>—</h3>
+                    <h3>98%</h3>
                     <p>de satisfação</p>
                 </div>
 
@@ -114,7 +114,7 @@
         <div class="flip-card hidden-up">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <h3>🏠 Direito Imobiliário</h3>
+                    <h3>⚖️ Direito Trabalhista</h3>
                 </div>
 
                 <div class="flip-card-back">
@@ -141,7 +141,7 @@
             <div class="flip-card-inner">
 
                 <div class="flip-card-front">
-                    <h3>⚖️ Direito Penal</h3>
+                    <h3>🏠 Direito Imobiliário</h3>
                 </div>
 
                 <div class="flip-card-back">
@@ -175,7 +175,6 @@
                 <div class="flip-card-back">
                     <h3>Atuação</h3>
 
-                    <!-- ATENÇÃO: esta lista é a mesma do Direito Penal (copiada por engano). Substituir pelos serviços bancários. -->
                     <ul>
                         <li>Inquérito policial</li>
                         <li>Audiência de custódia</li>
@@ -230,9 +229,18 @@
                 </span>
 
                 <h2>Dr. Elson Eduardo</h2>
-                <h1>SIA/MG 181.208</h1>
+                <h1>OAB/MG 181.208</h1>
 
                 <p>
+<<<<<<< HEAD
+                    Atendimento personalizado, conduzido com narrativa lógica, impugnação específica e pedidos estrategicamente calibrados.
+                     Contencioso e consultoria em Direito Imobiliário, Direito Penal e Direito Bancário.
+                
+                </p>
+
+                <p>
+                    A compreensão do Direito como uno e interdependente orienta cada manifestação, 
+=======
                     Atendimento personalizado, conduzido com narrativa lógica, impugnação específica e pedidos
                     estrategicamente calibrados.
                     Contencioso e consultoria em Direito Imobiliário, Direito Penal e Direito Bancário.
@@ -241,6 +249,7 @@
 
                 <p>
                     A compreensão do Direito como uno e interdependente orienta cada manifestação,
+>>>>>>> 03a6756 (atualização pagina, trocado cores)
                     cada peça e cada estratégia sempre com excelência, objetividade e segurança jurídica.
                 </p>
 
@@ -257,7 +266,7 @@
                     </div>
 
                     <div class="destaque">
-                        <h3 data-satisfacao>—</h3>
+                        <h3>98%</h3>
                         <span>Satisfação</span>
                     </div>
 
@@ -289,8 +298,8 @@
 
                 <a href="#home">Home</a>
                 <a href="#sobre">Sobre</a>
-                <a href="#areaatuacao">Áreas de Atuação</a>
-                <a href="#faleconosco">Contato</a>
+                <a href="#especialidades">Áreas de Atuação</a>
+                <a href="#contato">Contato</a>
             </div>
 
             <div class="footer-links">
@@ -304,7 +313,7 @@
             <div class="footer-contato">
                 <h3>Contato</h3>
 
-                <p>📞 (31) 98538-9996</p>
+                <p>📞 (XX) XXXXX-XXXX</p>
                 <p>📧 contato@elsonadvocacia.com.br</p>
                 <p>📍 Minas Gerais - Brasil</p>
 
@@ -400,18 +409,30 @@
         });
     </script>
 
-    <!-- Nota de satisfação real (média das avaliações dos clientes) -->
-    <script>
-        const MIN_AVALIACOES = 1; // só mostra a nota quando houver ao menos este total de avaliações
-        fetch("/api/media")
-            .then(r => r.json())
-            .then(d => {
-                if (d.total < MIN_AVALIACOES) return;
-                const texto = d.media.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "/5";
-                document.querySelectorAll("[data-satisfacao]").forEach(e => e.textContent = texto);
-            })
-            .catch(() => { });
-    </script>
+    <!-- Reveal Scroll 
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                const observer = new IntersectionObserver((entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+                        }
+
+                    });
+
+                }, {
+                    threshold: 0.2
+                });
+
+                document.querySelectorAll('.reveal').forEach(el => {
+                    observer.observe(el);
+                });
+
+            });
+        </script>-->
 
 </body>
 
